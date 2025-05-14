@@ -195,7 +195,7 @@ button:hover {
   font-size: 0.9em;
 }
 
-#profile-picture {
+#profile-photo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -203,6 +203,18 @@ button:hover {
   margin: 10px 0 10px auto;
   display: block;
 }
+
+#profile-photo {
+  font-size: 80px;
+  color: #888;
+  cursor: pointer;
+}
+
+#profile-photo-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
 
 .toast {
   visibility: hidden;

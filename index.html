@@ -188,9 +188,15 @@
   <div id="dashboard-view" class="auth-view">
 
     <p id="user-info"></p>
-    <i class="fa fa-user-circle" aria-hidden="true">
-      <img id="profile-picture" src="default-profile.jpg" alt="Profile Picture" />
-    </i>
+   
+      <!-- Profile Upload Icon -->
+<label for="upload-photo" id="profile-photo-label">
+  <i id="profile-photo" class="fa fa-user-circle" aria-hidden="true"></i>
+</label>
+
+<!-- Hidden File Input -->
+<input type="file" id="upload-photo" accept="image/*" style="display: none;" />
+
    
     <div id="food-content">
       <h3>Available Food Items</h3>
@@ -227,6 +233,7 @@
         <h3>Upload Profile Photo</h3>
         <input type="file" id="photo-upload" accept="image/*" />
         <button id="upload-photo-btn">Upload Photo</button>
+       
 
         <p id="update-success" class="info-message"></p>
       </div>

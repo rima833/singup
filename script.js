@@ -254,6 +254,22 @@ document.getElementById('update-profile-btn').addEventListener('click', () => {
   }
 });
 
+const fileInput = document.getElementById('upload-photo');
+  const profileLabel = document.getElementById('profile-photo-label');
+
+  fileInput.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        profileLabel.innerHTML = `<img src="${e.target.result}" alt="Profile Picture" style="width: 80px; height: 80px; border-radius: 50%;">`;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  });
+
 // Add your JavaScript code here
 
 // Handle profile photo upload
